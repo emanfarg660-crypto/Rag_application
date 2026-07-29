@@ -1,0 +1,175 @@
+# RAG Application using Google Gemini AI
+
+## Live Demo
+
+https://your-streamlit-app.streamlit.app
+## Demo Video
+
+
+
+
+
+
+## Overview
+
+This project is a Retrieval-Augmented Generation (RAG) application built with Python, Streamlit, Google Gemini AI, FAISS, LangChain, and Sentence Transformers.
+
+The application allows users to upload a PDF document, retrieve the most relevant information using semantic search, and generate accurate answers based on the document content through Google's Gemini language model.
+
+---
+
+## Features
+
+- Upload PDF documents
+- Extract text from PDF files
+- Generate text embeddings using Sentence Transformers
+- Store embeddings using FAISS
+- Perform semantic similarity search
+- Retrieve the most relevant document content
+- Generate context-aware responses using Google Gemini AI
+- Interactive chat interface
+- Maintain conversation history using Streamlit Session State
+
+---
+
+## Technologies Used
+
+- Python
+- Streamlit
+- Google Gemini API
+- LangChain
+- LangChain Community
+- Sentence Transformers
+- FAISS
+- NumPy
+- PyPDF
+
+---
+
+## Project Structure
+
+```
+.
+├── Rag.py
+├── requirements.txt
+├── README.md
+└── .streamlit/
+    └── secrets.toml
+```
+
+---
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/your-username/rag_application.git
+```
+
+Navigate to the project directory:
+
+```bash
+cd rag_application
+```
+
+Install the required dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## Configuration
+
+Create a `.streamlit/secrets.toml` file and add your Google Gemini API key:
+
+```toml
+GOOGLE_API_KEY="YOUR_API_KEY"
+```
+
+---
+
+## Running the Application
+
+```bash
+streamlit run Rag.py
+```
+
+---
+
+## Application Workflow
+
+```
+                     PDF Upload
+                         │
+                         ▼
+                  Load PDF Document
+                         │
+                         ▼
+                 Extract Document Text
+                         │
+                         ▼
+         Generate Sentence Embeddings
+                         │
+                         ▼
+              Store Embeddings in FAISS
+                         │
+                         ▼
+               User Enters a Question
+                         │
+                         ▼
+         Generate Question Embedding
+                         │
+                         ▼
+           Semantic Similarity Search
+                         │
+                         ▼
+          Retrieve Relevant Document
+                         │
+                         ▼
+      Build Prompt with Retrieved Context
+                         │
+                         ▼
+              Google Gemini AI Model
+                         │
+                         ▼
+              Generate Final Response
+                         │
+                         ▼
+           Display Answer to the User
+```
+
+---
+
+## Example
+
+### User Question
+
+```
+What is Machine Learning?
+```
+
+### Response
+
+The application retrieves the most relevant section from the uploaded PDF and uses Gemini AI to generate an accurate answer based on the retrieved context.
+
+---
+
+## Future Improvements
+
+- Support multiple PDF documents
+- Store chat history in a database
+- Display document sources with each answer
+- Add streaming responses
+- Support DOCX and TXT files
+- Integrate vector databases such as ChromaDB or Pinecone
+
+---
+
+## Author
+
+**Eman Ibrahim Farag**
+
+Mechatronics Engineer | Artificial Intelligence | Machine Learning | Robotics
