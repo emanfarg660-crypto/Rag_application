@@ -5,7 +5,7 @@ import os
 import faiss
 import numpy as np
 import tempfile
-from langchain.document_loaders import PyPDFLoader
+from langchain_community.document_loaders import PyPDFLoader
 from sentence_transformers import SentenceTransformer
 
 api = 'Google_Api_Key'
