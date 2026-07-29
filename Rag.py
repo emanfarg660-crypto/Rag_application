@@ -7,11 +7,16 @@ import numpy as np
 import tempfile
 from langchain_community.document_loaders import PyPDFLoader
 from sentence_transformers import SentenceTransformer
-try:
-    api = st.secrets["GOOGLE_API_KEY"]
-except KeyError:
-    st.error('⚠️ Google API Key not exist add it inStreamlit Secrets')
-    st.stop()
+
+
+key= st.secrets["GOOGLE_API_KEY"]
+st.title('RAG Application Using Gemini AI')
+
+#configure google generative ai
+if key :
+    genai.configure(api_key= api)
+else:
+    st.error('Your API is Not Found')
 
 #configure google generative ai
 genai.configure(api_key=api)
