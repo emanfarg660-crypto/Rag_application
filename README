@@ -1,6 +1,6 @@
-# RAG Application using Google Gemini AI
+#RAG Application using Google Gemini AI
 
-## Live Demo
+##Live Demo
 https://your-streamlit-app.streamlit.app
 
 ## Overview
@@ -11,7 +11,7 @@ The application allows users to upload a PDF document, retrieve the most relevan
 
 ---
 
-## Features
+##Features
 
 - Upload PDF documents
 - Extract text from PDF files
@@ -25,7 +25,7 @@ The application allows users to upload a PDF document, retrieve the most relevan
 
 ---
 
-## Technologies Used
+##Technologies Used
 
 - Python
 - Streamlit
@@ -39,7 +39,7 @@ The application allows users to upload a PDF document, retrieve the most relevan
 
 ---
 
-## Project Structure
+##Project Structure
 
 ```
 .
@@ -52,7 +52,7 @@ The application allows users to upload a PDF document, retrieve the most relevan
 
 ---
 
-## Installation
+##Installation
 
 Clone the repository:
 
@@ -74,7 +74,7 @@ pip install -r requirements.txt
 
 ---
 
-## Configuration
+##Configuration
 
 Create a `.streamlit/secrets.toml` file and add your Google Gemini API key:
 
@@ -84,7 +84,7 @@ GOOGLE_API_KEY="YOUR_API_KEY"
 
 ---
 
-## Running the Application
+##Running the Application
 
 ```bash
 streamlit run Rag.py
@@ -92,7 +92,7 @@ streamlit run Rag.py
 
 ---
 
-## Application Workflow
+##Application Workflow
 
 ```
                      PDF Upload
@@ -136,21 +136,21 @@ streamlit run Rag.py
 
 ---
 
-## Example
+##Example
 
-### User Question
+###User Question
 
 ```
 What is Machine Learning?
 ```
 
-### Response
+###Response
 
 The application retrieves the most relevant section from the uploaded PDF and uses Gemini AI to generate an accurate answer based on the retrieved context.
 
 ---
 
-## Future Improvements
+##Future Improvements
 
 - Support multiple PDF documents
 - Store chat history in a database
@@ -161,7 +161,7 @@ The application retrieves the most relevant section from the uploaded PDF and us
 
 ---
 
-## Author
+##Author
 
 **Eman Ibrahim Farag**
 
