@@ -8,7 +8,8 @@ import tempfile
 from langchain_community.document_loaders import PyPDFLoader
 from sentence_transformers import SentenceTransformer
 
-api = 'Google_Api_Key'
+api = st.secrets["GOOGLE_API_KEY"]
+genai.configure(api_key=api)
 st.title('RAG Application Using Gemini AI')
 
 #configure google generative ai
