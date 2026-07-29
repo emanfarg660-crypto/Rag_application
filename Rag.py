@@ -9,18 +9,15 @@ from langchain_community.document_loaders import PyPDFLoader
 from sentence_transformers import SentenceTransformer
 
 
-key= st.secrets["GOOGLE_API_KEY"]
-st.title('RAG Application Using Gemini AI')
+try:
+    api = st.secrets["GOOGLE_API_KEY"]
+except KeyError:
+    st.error("Google API Key not found in Streamlit Secrets.")
+    st.stop()
 
-#configure google generative ai
-if key :
-    genai.configure(api_key= api)
-else:
-    st.error('Your API is Not Found')
-
-#configure google generative ai
 genai.configure(api_key=api)
 
+st.title("RAG Application Using Gemini AI")
 
 #function to generate text using google API
 def Generate_Text(text):
