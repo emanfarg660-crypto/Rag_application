@@ -6,3 +6,4 @@ langchain
 langchain-community
 pypdf
 sentence-transformers
+langchain-community
